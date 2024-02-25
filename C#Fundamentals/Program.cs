@@ -103,8 +103,8 @@ Console.WriteLine(flag | flag2 | flag3); // Check All Flags
 Console.WriteLine(flag || flag2 || flag3); // if first left flag is true then not complete check and result true
 
 Console.WriteLine("===========================");
-int ascii = Console.Read(); // return ascii code of first inserted character
-Console.WriteLine($"return ascii code of first inserted character :: {ascii}");
+// int ascii = Console.Read(); // return ascii code of first inserted character
+// Console.WriteLine($"return ascii code of first inserted character :: {ascii}");
 
 #endregion
 
@@ -123,6 +123,25 @@ var data2 = "Hossam";
 #region Operator Precedence  اولويه التنفيذ
 Console.WriteLine(6+7*9-1);
 Console.WriteLine((6 + 7) * 9 - 1);
+#endregion
+
+
+#region C# Exercises
+// C# Sharp Basic Algorithm: Exercises, Practice, Solution
+
+// 1. Write a C# Sharp program to compute the sum of the two numerical values. If the two values are the same, return triple their sum.
+
+Console.WriteLine("Please Enter The First Number :: \n");
+int FirstNumber = int.Parse(Console.ReadLine());
+Console.WriteLine("Please Enter The Second Number :: ");
+int SecondNumber = int.Parse(Console.ReadLine());
+int Sum = FirstNumber + SecondNumber;
+if(FirstNumber == SecondNumber)
+    Console.WriteLine($"3 * FirstNumber {3 * FirstNumber}");
+else
+    Console.WriteLine($"The Sum of Two Number {FirstNumber} &&  {SecondNumber} = {FirstNumber + SecondNumber}");
+
+
 #endregion
 
 

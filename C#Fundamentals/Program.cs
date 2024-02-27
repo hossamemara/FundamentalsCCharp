@@ -213,6 +213,13 @@ Console.WriteLine(1 == 2 ? "Hossam" : "Siro");
 
 #endregion
 
+#region Foreach
+
+
+// foreach (DataType i in IterableName)
+
+#endregion
+
 #region C# Exercises
 // C# Sharp Basic Algorithm: Exercises, Practice, Solution
 

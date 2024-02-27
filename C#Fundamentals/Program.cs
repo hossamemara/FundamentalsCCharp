@@ -108,10 +108,12 @@ Console.WriteLine("===========================");
 
 #endregion
 
+
 #region Arithmetic Operators
 
 // +   -   *   /  % 
 #endregion
+
 
 #region Implicit Typing
 
@@ -120,11 +122,96 @@ var data2 = "Hossam";
 
 #endregion
 
+
 #region Operator Precedence  اولويه التنفيذ
 Console.WriteLine(6+7*9-1);
 Console.WriteLine((6 + 7) * 9 - 1);
 #endregion
 
+#region Assignment Operators
+
+int Number = 10;
+Number += 1; // Same as Number = Number + 1
+Console.WriteLine($"Number  = {Number}"); // 11
+
+#endregion
+
+#region Increment & Decrement Operators 
+
+// Pre Increment & Decrement 
+
+int Result1 = ++Number;
+Console.WriteLine($"Result1  = {Result1}");
+Console.WriteLine($"Number  = {Number}"); // 12
+
+// Post Increment & Decrement
+
+int Result2 = Number++;
+Console.WriteLine($"Result2  = {Result2}");
+Console.WriteLine($"Number  = {Number}"); // 13
+
+#endregion
+
+#region Comparison Operators
+// == , != , > , < , >= , <=     Return True or False 
+
+#endregion
+
+#region String Parsing  
+
+// Convert String To Differnet Data Types 
+Console.WriteLine("Enter Num1");
+int Num1 = int.Parse(Console.ReadLine());
+Console.WriteLine($"Num1  = {Num1}");
+Console.WriteLine("Enter Num2");
+double Num2 = double.Parse(Console.ReadLine());
+Console.WriteLine($"Num2  = {Num2}");
+
+#endregion
+
+#region Arrays 
+
+/* 
+ * Array Declaration
+ * DataType [] ArrayName = {item1, item2, ..........}
+ * DataType [] ArrayName = new DataType [ArraySize] 
+
+ */
+
+int[] Numbers = { };
+int[] Nums = new int[5];
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine($"Please Enter Item {i + 1}");
+    bool Num = int.TryParse(Console.ReadLine(),out Nums[i]);
+    //Console.WriteLine($"Num Bool is {Num}");
+}
+
+foreach (int i in Nums)
+    Console.WriteLine($"Array Items :: {i}");
+
+/*
+ Sort()  , Copy()
+
+ */
+Array.Sort(Nums);
+
+foreach (int i in Nums)
+    Console.WriteLine($"Array Nums Items :: {i}");
+int[] Nums2 = new int[5];
+Array.Copy(Nums, Nums2, 3);
+foreach (int i in Nums2)
+    Console.WriteLine($"Array Nums2 Items :: {i}");
+
+#endregion
+
+
+#region Ternary Operators
+
+// Condition ? TrueOutput : TrueOutput ;
+Console.WriteLine(1 == 2 ? "Hossam" : "Siro");
+
+#endregion
 
 #region C# Exercises
 // C# Sharp Basic Algorithm: Exercises, Practice, Solution

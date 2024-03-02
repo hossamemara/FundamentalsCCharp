@@ -226,7 +226,62 @@ Console.WriteLine(1 == 2 ? "Hossam" : "Siro");
 
 #endregion
 
+#region While & Do While
 
+int n = 5;
+while( n < 10 )
+{
+    Console.WriteLine(n++);
+}
+
+int n2 = 5;
+do
+{
+    Console.WriteLine(n2++);
+}
+while (n2 < 5);
+
+
+#endregion
+
+#region Switch
+Console.WriteLine("Please Enter Your Selection :: ");
+string Option = Console.ReadLine();
+switch(Option)
+{
+    case "1":
+        Console.WriteLine(Name.ToUpper());
+        break;
+    case "2":
+        Console.WriteLine(Name.ToLower());
+        break;
+    default:
+        Console.WriteLine("Invalid Option !");
+        break;
+}
+
+#endregion
+
+
+#region Methods or Functions
+
+/*
+ Decleration 
+
+ DataType FunctionName(Parameters)
+ {
+ 
+ }
+
+ */
+
+static void PrintHello(string welcome)
+{
+    Console.WriteLine(welcome);
+}
+PrintHello("Hello World");
+
+#endregion
 #region C# Exercises
 
 // see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution

@@ -50,7 +50,7 @@ string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
 
         
  */
-double x = 10.5;
+    double x = 10.5;
     float y = 10.5f;
 
 #region string Methods
@@ -219,6 +219,10 @@ Console.WriteLine(1 == 2 ? "Hossam" : "Siro");
 // foreach (DataType i in IterableName)
 
 #endregion
+
+
+
+
 
 #region C# Exercises
 // C# Sharp Basic Algorithm: Exercises, Practice, Solution

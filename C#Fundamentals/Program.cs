@@ -128,6 +128,7 @@ Console.WriteLine(6+7*9-1);
 Console.WriteLine((6 + 7) * 9 - 1);
 #endregion
 
+
 #region Assignment Operators
 
 int Number = 10;
@@ -135,6 +136,7 @@ Number += 1; // Same as Number = Number + 1
 Console.WriteLine($"Number  = {Number}"); // 11
 
 #endregion
+
 
 #region Increment & Decrement Operators 
 
@@ -152,10 +154,12 @@ Console.WriteLine($"Number  = {Number}"); // 13
 
 #endregion
 
+
 #region Comparison Operators
 // == , != , > , < , >= , <=     Return True or False 
 
 #endregion
+
 
 #region String Parsing  
 
@@ -168,6 +172,7 @@ double Num2 = double.Parse(Console.ReadLine());
 Console.WriteLine($"Num2  = {Num2}");
 
 #endregion
+
 
 #region Arrays 
 
@@ -213,6 +218,7 @@ Console.WriteLine(1 == 2 ? "Hossam" : "Siro");
 
 #endregion
 
+
 #region Foreach
 
 
@@ -220,11 +226,66 @@ Console.WriteLine(1 == 2 ? "Hossam" : "Siro");
 
 #endregion
 
+#region While & Do While
+
+int n = 5;
+while( n < 10 )
+{
+    Console.WriteLine(n++);
+}
+
+int n2 = 5;
+do
+{
+    Console.WriteLine(n2++);
+}
+while (n2 < 5);
 
 
+#endregion
+
+#region Switch
+Console.WriteLine("Please Enter Your Selection :: ");
+string Option = Console.ReadLine();
+switch(Option)
+{
+    case "1":
+        Console.WriteLine(Name.ToUpper());
+        break;
+    case "2":
+        Console.WriteLine(Name.ToLower());
+        break;
+    default:
+        Console.WriteLine("Invalid Option !");
+        break;
+}
+
+#endregion
 
 
+#region Methods or Functions
+
+/*
+ Decleration 
+
+ DataType FunctionName(Parameters)
+ {
+ 
+ }
+
+ */
+
+static void PrintHello(string welcome)
+{
+    Console.WriteLine(welcome);
+}
+PrintHello("Hello World");
+
+#endregion
 #region C# Exercises
+
+// see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution
+
 // C# Sharp Basic Algorithm: Exercises, Practice, Solution
 
 // 1. Write a C# Sharp program to compute the sum of the two numerical values. If the two values are the same, return triple their sum.
@@ -237,13 +298,12 @@ int Sum = FirstNumber + SecondNumber;
 if(FirstNumber == SecondNumber)
     Console.WriteLine($"3 * FirstNumber {3 * FirstNumber}");
 else
-    Console.WriteLine($"The Sum of Two Number {FirstNumber} &&  {SecondNumber} = {FirstNumber + SecondNumber}");
+    Console.WriteLine($"The Sum of Two Number {FirstNumber} &&  {SecondNumber} = {Sum}");
 
 
 #endregion
 
 
-// see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution
 
 
 

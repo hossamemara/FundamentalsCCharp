@@ -275,13 +275,53 @@ switch(Option)
 
  */
 
+// Method Naming Should Start With Verb
+/* Methods Types 
+  1 . With Return Type 
+  2. Without Return Type
+ */
+
+
 static void PrintHello(string welcome)
 {
+
     Console.WriteLine(welcome);
 }
-PrintHello("Hello World");
+PrintHello("Hello World"); // Method Invoking , Calling or Triggering
+
+// Optional Parameters 
+/* 
+ Comments 
+1. Single Line Comment
+2. Multi Line Comment
+3. Todo Comment //todo: This Todo
+4. Xml Documentation /// Summary For Methods
+
+ */
+// todo: Take From User 
+int[] numbersArray = new int[] {1,2,3,4,5 };
+CalculateAverage(numbersArray);  // Method Invoke , Trigger or Calling
+CalculateAverage(numbersArray, true);  // Method Invoke , Trigger or Calling
+CalculateAverage(numbersArray, PrintAverage: true);  // Method Invoke , Trigger or Calling
+// Xml Documnetation
+
+
+static double CalculateAverage(int[] numbers,bool PrintAverage = false, bool PrintSum = false) // bool PrintAverage = false is Optional Parameters
+{
+    int sum = 0;
+    double average = 0;
+    foreach (int number in numbers)
+    {
+        sum += number;
+    }
+    average = sum / numbers.Length;
+    if (PrintAverage)
+        Console.WriteLine($"Average = {average}");
+    return average;
+}
 
 #endregion
+
 #region C# Exercises
 
 // see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution
@@ -302,11 +342,5 @@ else
 
 
 #endregion
-
-
-
-
-
-
 
 

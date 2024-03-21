@@ -322,6 +322,13 @@ static double CalculateAverage(int[] numbers,bool PrintAverage = false, bool Pri
 
 #endregion
 
+#region Value Types && Reference Type
+
+// Value Type : 
+// Reference Type: 
+
+#endregion
+
 #region C# Exercises
 
 // see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution

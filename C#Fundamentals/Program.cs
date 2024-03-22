@@ -324,8 +324,62 @@ static double CalculateAverage(int[] numbers,bool PrintAverage = false, bool Pri
 
 #region Value Types && Reference Type
 
-// Value Type : 
-// Reference Type: 
+/*
+
+Value Type (Imutable): like  (int, uint, double , float, char , bool, struct)
+
+1. value and Addresse Stored In Stack
+2. Stack :  عباره عن مصفوفه يتم تخزين الذاكره فى كتل متجاوره ويتم الحذف والاضافه LIFO
+3. يتم تخصيص الذاكره والغائها بواسطه الكومبيلر
+
+Reference Type (mutable): (arrays, string)
+
+1. value Stored in Heap and Addresse Stored In Stack 
+2.  يتم التخصيص والحذف والاضافه بشكل عشوائى
+3. يتم التخصيص بواسطه المبرمج ويتم الاغاء بواسطه ال GC
+ 
+ */
+
+// Value Type
+
+int q1 = 5; // Addresse 1
+int q2 = q1; // Addresse 2
+q1 = 10; // Addresse 3
+Console.WriteLine($"q1 = {q1}");
+Console.WriteLine($"q2 = {q2}");
+
+// Reference Types
+
+int[] array1 = { 1,2,3}; // Addresse 1  , Value Stored in Heap Location
+int[] array2 = array1; // Same Addresse 1, , Value Stored in Same Heap Location
+array1[0] = 4;
+array1[1] = 5;
+array1[2] = 6;
+Console.WriteLine($"array1[0] = {array1[0]}");
+Console.WriteLine($"array1[0] = {array1[1]}");
+Console.WriteLine($"array1[0] = {array1[2]}");
+Console.WriteLine($"array2[0] = {array1[0]}");
+Console.WriteLine($"array2[0] = {array2[1]}");
+Console.WriteLine($"array2[0] = {array2[2]}");
+
+int num = 5;
+DuplicateNumber(num);
+Console.WriteLine($"num = {num}");
+int [] numbersArr = { 1, 2, 3 };
+DuplicateNumbers(numbersArr);
+Console.WriteLine($"numbersArr[0]}}  = {numbersArr[0]}");
+Console.WriteLine($"numbersArr[1]}}  = {numbersArr[1]}");
+Console.WriteLine($"numbersArr[2]}}  = {numbersArr[2]}");
+static void DuplicateNumber(int num)
+{
+    num *= 2;
+}
+
+static void DuplicateNumbers(int [] nums)
+{
+    for (int i = 0; i < nums.Length; i++)
+        nums[i] *= 2; 
+}
 
 #endregion
 

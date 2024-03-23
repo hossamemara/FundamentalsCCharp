@@ -1,5 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+#region Difference Between Compiler & Interpreter 
+
+// https://www.youtube.com/watch?v=lui_SjvGl2I&list=PLoP3S2S1qTfBCtTYJ2dyy3mpn7aWAAjdN&index=6
+
+#endregion
+
 #region Variables
 // Variables : is a Data Holder 
 
@@ -18,6 +24,8 @@
 
 string Name = "Hossam Emara";
 string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
+double x = 10.5;
+float y = 10.5f;
 
 #endregion
 
@@ -27,6 +35,12 @@ string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
 #region Data Types 
 
 /*
+  
+ https://www.javatpoint.com/primitive-vs-non-primitive-data-structure
+
+ 
+ # Primitive Data Types (Value Type)
+
  1. string ==> 16 bit per character	Stores a sequence of characters, surrounded by double quotes
  2. boolean ==> 1 bit	   true & false
  3. int  ==> 32 bit	   Stores whole numbers from -2,147,483,648 to 2,147,483,647
@@ -37,6 +51,13 @@ string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
  8. byte ==> Unsigned 8-bit integer	   Stores 0 to 255	
  9. uint ==> Unsigned 32-bit integer	0 to 4,294,967,295	
  
+# Non Primitive Data Types (Reference Type)
+
+1. Classes
+2. Struct 
+3. Enums 
+4. Arrays 
+5. String 
 
  /* See https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types
    
@@ -44,14 +65,8 @@ string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
  
  */
 
-/* Q1. What's Difference Between Value Typed and Reference Types ? 
 
- 
 
-        
- */
-    double x = 10.5;
-    float y = 10.5f;
 
 #region string Methods
 
@@ -162,14 +177,32 @@ Console.WriteLine($"Number  = {Number}"); // 13
 
 
 #region String Parsing  
-
 // Convert String To Differnet Data Types 
+
+// 1. Parse 
+
 Console.WriteLine("Enter Num1");
 int Num1 = int.Parse(Console.ReadLine());
 Console.WriteLine($"Num1  = {Num1}");
 Console.WriteLine("Enter Num2");
 double Num2 = double.Parse(Console.ReadLine());
 Console.WriteLine($"Num2  = {Num2}");
+
+// 2. Try Parse
+
+string numberString = "123";
+int number;
+bool success = int.TryParse(numberString, out number);
+
+if (success)
+{
+    Console.WriteLine("Parsing succeeded. Number: " + number); // Output: Parsing succeeded. Number: 123
+}
+else
+{
+    Console.WriteLine("Parsing failed.");
+}
+
 
 #endregion
 

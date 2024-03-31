@@ -416,6 +416,89 @@ static void DuplicateNumbers(int [] nums)
 
 #endregion
 
+#region Value Type Casting
+
+// 1. Implicit Casting (Boxing)(Safe Casting) Put Small Size Into Big Size i.e 
+// Put int Into float , byte into int ....
+
+byte S1 = 200;
+int S2 = S1;
+Console.WriteLine(S2);
+int S3 = 200;
+long S4 = S3;
+Console.WriteLine(S4);
+
+
+
+// 2. Explicit Casting (Unboxing)(Unsafe Casting) Put Big Size Into Small Size
+
+// if You Need This Casting Raise Exception
+checked
+{
+
+    //long U1 = 33333;
+    //byte U2 = (byte)U1;
+    //Console.WriteLine(U2);
+
+}
+
+// if You Need This Casting Not Raise Exception This Only Brackets Block
+unchecked
+{
+   
+
+}
+
+// 3. Convert
+
+int Age = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Age  = {Age}");
+
+
+// 4. Parse
+
+// Parse 
+
+Console.WriteLine("Enter Num3");
+int Num3 = int.Parse(Console.ReadLine());
+Console.WriteLine($"Num3  = {Num3}");
+Console.WriteLine("Enter Num4");
+double Num4 = double.Parse(Console.ReadLine());
+Console.WriteLine($"Num4  = {Num4}");
+
+// Try Parse
+
+string NumberString = "123";
+int Number0;
+bool SuccessConvert = int.TryParse(NumberString, out Number0);
+
+if (SuccessConvert)
+{
+    Console.WriteLine("Parsing succeeded. Number: " + Number0); // Output: Parsing succeeded. Number: 123
+}
+else
+{
+    Console.WriteLine("Parsing failed.");
+}
+
+
+
+
+#endregion
+
+
+#region Goto
+
+int r = 0;
+start:
+Console.WriteLine(r);
+r++;
+if (r < 5)
+    goto start;
+
+Console.ReadLine();
+
+#endregion
 #region C# Exercises
 
 // see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution

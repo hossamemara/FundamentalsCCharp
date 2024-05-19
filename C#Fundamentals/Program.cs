@@ -386,7 +386,7 @@ array1[2] = 6;
 Console.WriteLine($"array1[0] = {array1[0]}");
 Console.WriteLine($"array1[0] = {array1[1]}");
 Console.WriteLine($"array1[0] = {array1[2]}");
-Console.WriteLine($"array2[0] = {array1[0]}");
+Console.WriteLine($"array2[0] = {array2[0]}");
 Console.WriteLine($"array2[0] = {array2[1]}");
 Console.WriteLine($"array2[0] = {array2[2]}");
 

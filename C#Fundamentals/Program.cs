@@ -31,7 +31,6 @@ float y = 10.5f;
 
 #endregion
 
-
 #region Data Types 
 
 /*
@@ -97,7 +96,6 @@ Console.WriteLine($"{w} is letter ? {Char.IsLetter(w)}");
 
 #endregion
 
-
 #region Logical Operators
 
 /*
@@ -123,12 +121,10 @@ Console.WriteLine("===========================");
 
 #endregion
 
-
 #region Arithmetic Operators
 
 // +   -   *   /  % 
 #endregion
-
 
 #region Implicit Typing
 
@@ -137,12 +133,10 @@ var data2 = "Hossam";
 
 #endregion
 
-
 #region Operator Precedence  اولويه التنفيذ
 Console.WriteLine(6+7*9-1);
 Console.WriteLine((6 + 7) * 9 - 1);
 #endregion
-
 
 #region Assignment Operators
 
@@ -151,7 +145,6 @@ Number += 1; // Same as Number = Number + 1
 Console.WriteLine($"Number  = {Number}"); // 11
 
 #endregion
-
 
 #region Increment & Decrement Operators 
 
@@ -169,12 +162,10 @@ Console.WriteLine($"Number  = {Number}"); // 13
 
 #endregion
 
-
 #region Comparison Operators
 // == , != , > , < , >= , <=     Return True or False 
 
 #endregion
-
 
 #region String Parsing  
 // Convert String To Differnet Data Types 
@@ -205,7 +196,6 @@ else
 
 
 #endregion
-
 
 #region Arrays 
 
@@ -243,14 +233,12 @@ foreach (int i in Nums2)
 
 #endregion
 
-
 #region Ternary Operators
 
 // Condition ? TrueOutput : TrueOutput ;
 Console.WriteLine(1 == 2 ? "Hossam" : "Siro");
 
 #endregion
-
 
 #region Foreach
 
@@ -294,7 +282,6 @@ switch(Option)
 }
 
 #endregion
-
 
 #region Methods or Functions
 
@@ -486,7 +473,6 @@ else
 
 #endregion
 
-
 #region Goto
 
 int r = 0;
@@ -499,6 +485,7 @@ if (r < 5)
 Console.ReadLine();
 
 #endregion
+
 #region C# Exercises
 
 // see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution

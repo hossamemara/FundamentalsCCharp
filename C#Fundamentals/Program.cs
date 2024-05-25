@@ -494,6 +494,8 @@ Console.ReadLine();
 
 #endregion
 
+
+
 #region C# Exercises
 
 // see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution

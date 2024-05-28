@@ -22,6 +22,9 @@
 
 */
 
+using C_Fundamentals.Classes;
+using System.Text;
+
 string Name = "Hossam Emara";
 string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
 double x = 10.5;
@@ -494,7 +497,96 @@ Console.ReadLine();
 
 #endregion
 
+#region String Split and Join
 
+// Split(Seperator)  == > Convert String To Array of Strings
+
+Console.WriteLine("Please enter string Words Sperrated by , ");
+string? words = Console.ReadLine();
+if (String.IsNullOrEmpty(words))
+{
+    Console.WriteLine("No words entered.");
+}
+
+else
+{
+    string[] WordsArray = words.Split(",");
+    foreach (var item in WordsArray)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Join (Seperator, Input Array)  == > Convert Array to Strings
+string[] Words = { "Hossam", "Siro" };
+string StringWords = string.Join(",", Words);
+Console.WriteLine(StringWords);
+
+#endregion
+
+#region String Builder
+
+// String Builder Use Linked list Data Structure
+string str = "Hello";
+str = "Hello Pacionate ";
+str+= "World";
+// We Have 3 Memory Locations In Heap This Will Make Low Performance
+Console.WriteLine(str);
+
+
+/* 
+ String Builder Have Default Capacity This Capacity Extends Automatically
+ This Make Memory High Performance
+*/
+StringBuilder sb = new StringBuilder();
+sb.Append("Hello Pacionate");
+Console.WriteLine($"Lenght {sb.Length}");
+Console.WriteLine($"Capacity {sb.Capacity}");
+Console.WriteLine($"MaxCapacity {sb.MaxCapacity}");
+
+sb.Append("Coders");
+
+Console.WriteLine($"Lenght {sb.Length}");
+Console.WriteLine($"Capacity {sb.Capacity}");
+Console.WriteLine($"MaxCapacity {sb.MaxCapacity}");
+// We Can Set Default Capacity Using ===> 
+StringBuilder sb2 = new StringBuilder(4095); // Default Capacity 4096
+
+Console.WriteLine($"Lenght {sb.Length}");
+Console.WriteLine($"Capacity {sb.Capacity}");
+Console.WriteLine($"MaxCapacity {sb.MaxCapacity}");
+
+#endregion
+
+#region Compilation Process
+
+
+
+#endregion
+
+
+#region Class  & Object
+
+// Class is Complex Reference Type Data Type 
+Student s1 = new Student("Hossam");
+s1.GetHashCode();  // Class Inherit From Object
+Student s2 = new Student();
+Student [] students = new Student[] {} ;
+students[0] = s1;
+students[1] = s2;
+Console.WriteLine(students[0]);
+/* Constructor ==> Special Type of Method Used For Class Initialization
+    This Methos Executed When We Create Object From Class
+    There's Default and User Defined Constructor
+    
+*/
+
+
+
+
+
+
+#endregion
 
 #region C# Exercises
 

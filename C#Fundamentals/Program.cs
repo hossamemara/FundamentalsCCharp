@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+using st = C_Fundamentals.Classes.InternalClasses.Student; // Aliass Names
 #region Difference Between Compiler & Interpreter 
 
 // https://www.youtube.com/watch?v=lui_SjvGl2I&list=PLoP3S2S1qTfBCtTYJ2dyy3mpn7aWAAjdN&index=6
@@ -24,6 +24,8 @@
 
 using C_Fundamentals.Classes;
 using System.Text;
+using C_Fundamentals.Classes.InternalClasses;
+using Student = C_Fundamentals.Classes.Student;
 
 string Name = "Hossam Emara";
 string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
@@ -568,13 +570,12 @@ Console.WriteLine($"MaxCapacity {sb.MaxCapacity}");
 #region Class  & Object
 
 // Class is Complex Reference Type Data Type 
-Student s1 = new Student("Hossam");
+st s = new st(); // To Solve Conflict
+C_Fundamentals.Classes.Student s1 = new C_Fundamentals.Classes.Student(30) { Name="Hossam",Salary=100};  // Object Initializer
 s1.GetHashCode();  // Class Inherit From Object
-Student s2 = new Student();
-Student [] students = new Student[] {} ;
-students[0] = s1;
-students[1] = s2;
-Console.WriteLine(students[0]);
+//Student s2 = new Student(30, Id = 1); // Can't Set Id
+C_Fundamentals.Classes.Student [] students = new C_Fundamentals.Classes.Student [] {} ;
+
 /* Constructor ==> Special Type of Method Used For Class Initialization
     This Methos Executed When We Create Object From Class
     There's Default and User Defined Constructor
@@ -583,6 +584,143 @@ Console.WriteLine(students[0]);
 
 
 
+
+
+
+#endregion
+
+#region Constant and Readonly
+
+const float Pi = 3.14f;
+
+//const float Pi; // Not Allowed
+
+// const vs readonly 
+
+/*
+ const :
+
+1. compile time execution
+2. We Can't Change its Value 
+3. We Must Give it Value at Same line
+
+ readonly:
+
+1. runtime execution
+2. We Can Change its Value at Constructor only
+3. We Mustn't Give it Value at Same line
+ */
+
+
+#endregion
+
+#region Static Class vs Non Static Class 
+
+/* 
+  Static Class
+ 
+We Can't Have Instance From Static Class 
+ Static Constructor Excecute One Time When We Use This Static Class 
+
+ */
+
+StaticClass.Name = "Hossam";
+StaticClass.Name = "Siro";
+Console.WriteLine(StaticClass.PrintHello());
+
+/* 
+
+  Non Static Class
+ 
+We Can Have Instance From Non Static Class 
+Non Static Constructor Excecute everytime We Use This Non Static Class 
+
+
+
+ */
+NonStaticClass nsc = new NonStaticClass();
+NonStaticClass nsc2 = new NonStaticClass();
+NonStaticClass nsc3 = new NonStaticClass();
+NonStaticClass nsc4 = new NonStaticClass();
+NonStaticClass.Name = "Hossam";
+NonStaticClass.Name = "Siro";
+Console.WriteLine(NonStaticClass.PrintHello());
+
+
+#endregion
+
+#region Variables Scope
+
+/*
+
+ 1. Class Level Scope 
+ 2. Method Level Scope 
+ 3. Block Level Scope
+
+ */
+
+
+
+#endregion
+
+#region Pass by Value & Pass by Reverence
+
+#region ref & out 
+
+// Cast value type to be reverence type 
+
+bool isSucess = true;
+var result = Divide(10, 0, isSucess);
+Console.WriteLine(isSucess);
+Console.WriteLine(result);
+
+bool isSucess2 = true;
+var result2 = Divide2(10, 0,ref isSucess2);
+Console.WriteLine(isSucess2);
+Console.WriteLine(result2);
+
+bool isSucess3;
+var result3 = Divide3(10, 0, out isSucess3);
+Console.WriteLine(isSucess3);
+Console.WriteLine(result3);
+
+static double Divide(double number , double divisor, bool isSucess)
+{
+    if (divisor == 0)
+    {
+        isSucess = false;
+        return 0;
+    }
+    isSucess = true;
+    return number / divisor;
+        
+}
+static double Divide2(double number, double divisor,ref bool isSucess)
+{
+    if (divisor == 0)
+    {
+        isSucess = false;
+        return 0;
+    }
+    isSucess = true;
+    return number / divisor;
+
+}
+
+static double Divide3(double number, double divisor, out bool isSucess)
+{
+    if (divisor == 0)
+    {
+        isSucess = false;
+        return 0;
+    }
+    isSucess = true;
+    return number / divisor;
+
+}
+
+
+#endregion
 
 
 

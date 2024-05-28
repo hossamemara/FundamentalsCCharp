@@ -10,15 +10,27 @@ namespace C_Fundamentals.Classes
     {
 
         // Prpperties
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int Id { get;  }
+        public string Name { get; init; }
         public int Age { get; set; }
-        public long Salary { get; set; }
+        private long _Salary;
 
-        public Student(string Name)
+        public Student(int Age)
         {
-            Name = Name; // This is Not The Class Property This is Constructor Parameters
-            this.Name = Name; // this.Name For Class Property 
+            //Age = age; // This is Not The Class Property This is Constructor Parameters
+            this.Age = Age; // this.Name For Class Property 
         }
+        public long Salary
+        {
+            get { 
+                return _Salary; 
+            }
+            set { 
+                _Salary = value; 
+            }
+        }
+
+       
+
     }
 }

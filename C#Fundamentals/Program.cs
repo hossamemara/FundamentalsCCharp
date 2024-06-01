@@ -26,6 +26,7 @@ using C_Fundamentals.Classes;
 using System.Text;
 using C_Fundamentals.Classes.InternalClasses;
 using Student = C_Fundamentals.Classes.Student;
+using C_Fundamentals.Enums;
 
 string Name = "Hossam Emara";
 string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
@@ -721,6 +722,88 @@ static double Divide3(double number, double divisor, out bool isSucess)
 
 
 #endregion
+
+
+
+#endregion
+
+#region Exceptions
+
+try
+{
+    int g1 = 10;
+    int g2 = 0;
+    Console.WriteLine(g1/g2);
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+}
+finally
+{
+    Console.WriteLine("Always Executed");
+}
+
+
+#endregion
+
+#region Enums
+
+// Enums : Range of Related Constans Like Week Days, Month Days , or Genders
+
+/* 
+  Types: 
+  1. Simple Enum 
+  2. Flags Enums 
+  
+ */
+
+
+
+
+
+WeekDays weekEndDays = WeekDays.Saturday ;
+Console.WriteLine(weekEndDays);
+
+
+/*  bitwise operators (|, &, ~, ^)
+ 
+  |  ==> Compite operator
+  &  ==> Common operator
+  ~  ==> Except operator
+  ^  ==> Toogle operator
+
+ */
+
+
+//   |  ==> Compite operator
+Seasons ColdSeasons = Seasons.Winter | Seasons.Autumn;
+Seasons HotSeasons = Seasons.Spring | Seasons.Summer;
+Console.WriteLine($"ColdSeasons :: {ColdSeasons}");
+Console.WriteLine($"HotSeasons :: {HotSeasons}");
+
+// &  ==> Common operator
+Seasons se1 = Seasons.Winter | Seasons.Summer;
+Seasons se2 = Seasons.Spring | Seasons.Summer;
+Console.WriteLine(se1 & se2);
+
+
+// ~  ==> Except operator
+Seasons se3 = Seasons.Winter | Seasons.Summer;
+Seasons se4 = Seasons.Summer;
+Console.WriteLine(se3 & ~ se4);
+
+
+Seasons se5 = Seasons.Winter | Seasons.Spring;
+Console.WriteLine(se5 & ~ Seasons.Summer);
+
+// ^ ==> Toogle operator
+Seasons se6 = Seasons.Winter | Seasons.Spring;
+Console.WriteLine(se6 ^ Seasons.Summer);
+Console.WriteLine(se6 ^ Seasons.Winter);
+
+
+
 
 
 

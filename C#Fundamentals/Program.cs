@@ -901,7 +901,8 @@ Accessibility:
 
 #endregion
 
-#region Member Hiding/Shadowing
+#region Member Hiding/Shadowing or Static binding & dynamic binding 
+
 
 // used if yo can't edit the base class 
 AbstractShape rc3 = new DerivedRectangle { width = 5, height = 6 };

@@ -926,24 +926,31 @@ Practical Uses of Interfaces ===>
 
 * Dependency Injection:
 
-Interfaces are often used in dependency injection to decouple the implementation from the abstraction, allowing for more flexible and testable code.
+Interfaces are often used in dependency injection to decouple the implementation from the abstraction, 
+allowing for more flexible and testable code.
 
 * Decoupling Code:
 
-By programming to an interface rather than an implementation, you can change the underlying implementation without changing the code that depends on the interface.
-Multiple Inheritance of Behavior:
+By programming to an interface rather than an implementation, 
+you can change the underlying implementation without changing the code that depends on the interface.
 
-Since C# does not support multiple inheritance for classes, interfaces provide a way to achieve a similar effect by allowing a class to implement multiple interfaces.
-* Design Patterns:
+* Multiple Inheritance of Behavior:
 
-Interfaces are a key component in many design patterns (e.g., Strategy, Observer, Factory) to achieve flexibility and extensibility.
+Since C# does not support multiple inheritance for classes, interfaces provide a way to achieve 
+a similar effect by allowing a class to implement multiple interfaces.
+
+ * Design Patterns:
+
+Interfaces are a key component in many design patterns (e.g., Strategy, Observer, Factory) 
+to achieve flexibility and extensibility.
 
 Conclusion :::
 
 Interfaces in C# are a powerful tool for defining contracts and achieving polymorphism. 
 
 They promote code reusability, flexibility, and maintainability 
-by allowing different classes or structs to implement the same set of methods and properties in their own way.
+by allowing different classes or structs to implement the same set of methods and properties 
+in their own way.
 Understanding how and when to use interfaces is crucial for designing robust and scalable applications.
 
 

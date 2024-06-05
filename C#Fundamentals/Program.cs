@@ -809,6 +809,55 @@ Console.WriteLine(se6 ^ Seasons.Winter);
 
 #endregion
 
+#region Abstract Class vs Sealed Class 
+
+/*
+1. Instantiation:
+
+* Abstract classes cannot be instantiated directly.
+
+* Sealed classes can be instantiated.
+
+2. Inheritance:
+
+* Abstract classes are meant to be inherited from.
+
+* Sealed classes cannot be inherited.
+
+3. Purpose:
+
+* Abstract classes provide a template and enforce implementation in derived classes.
+
+* Sealed classes restrict inheritance to ensure the class's implementation remains unchanged.
+
+4. Conclusion
+
+* Abstract Class: Use when you need to define a base class that provides some implementation and defines a contract for derived classes.
+
+* Sealed Class: Use when you want to prevent any further subclassing of a class to finalize its implementation and ensure it cannot be altered through inheritance.
+
+ */
+
+Circle cr1 = new Circle { raduis = 5 };
+cr1.PrintArea();   
+Rectangle rc1 = new Rectangle { width = 5 , height =6};
+rc1.PrintArea();
+
+// AbstractShape shape2 = new AbstractShape { raduis = 3 }; Can't be instantiated directly
+
+AbstractShape cr2 = new DerivedCircle { raduis = 3 };
+cr2.PrintArea();
+
+AbstractShape rc2 = new DerivedRectangle { width = 3, height = 7 };
+rc2.PrintArea();
+
+
+SealedClass sc = new SealedClass(); // Sealed classes cannot be inherited.
+sc.MyProperty = "Hello";
+Console.WriteLine(sc.MyProperty); 
+
+#endregion
+
 #region C# Exercises
 
 // see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution

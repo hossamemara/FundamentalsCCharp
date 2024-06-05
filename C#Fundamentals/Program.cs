@@ -1,12 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using st = C_Fundamentals.Classes.InternalClasses.Student; // Aliass Names
-#region Difference Between Compiler & Interpreter 
+
+#region 1.Difference Between Compiler & Interpreter 
 
 // https://www.youtube.com/watch?v=lui_SjvGl2I&list=PLoP3S2S1qTfBCtTYJ2dyy3mpn7aWAAjdN&index=6
 
 #endregion
 
-#region Variables
+
+#region 2. Variables
 // Variables : is a Data Holder 
 
 
@@ -37,7 +39,8 @@ float y = 10.5f;
 
 #endregion
 
-#region Data Types 
+
+#region 3. Data Types 
 
 /*
   
@@ -102,7 +105,8 @@ Console.WriteLine($"{w} is letter ? {Char.IsLetter(w)}");
 
 #endregion
 
-#region Logical Operators
+
+#region 4. Logical Operators
 
 /*
   &   (normal and )  ,  && (Short Circuit and)
@@ -127,24 +131,28 @@ Console.WriteLine("===========================");
 
 #endregion
 
-#region Arithmetic Operators
+
+#region 5. Arithmetic Operators
 
 // +   -   *   /  % 
 #endregion
 
-#region Implicit Typing
+
+#region 6. Implicit Typing
 
 var data = 6.7;
 var data2 = "Hossam";
 
 #endregion
 
-#region Operator Precedence  اولويه التنفيذ
+
+#region 7. Operator Precedence  اولويه التنفيذ
 Console.WriteLine(6+7*9-1);
 Console.WriteLine((6 + 7) * 9 - 1);
 #endregion
 
-#region Assignment Operators
+
+#region 8. Assignment Operators
 
 int Number = 10;
 Number += 1; // Same as Number = Number + 1
@@ -152,7 +160,8 @@ Console.WriteLine($"Number  = {Number}"); // 11
 
 #endregion
 
-#region Increment & Decrement Operators 
+
+#region 9. Increment & Decrement Operators 
 
 // Pre Increment & Decrement 
 
@@ -168,12 +177,14 @@ Console.WriteLine($"Number  = {Number}"); // 13
 
 #endregion
 
-#region Comparison Operators
+
+#region 10 Comparison Operators
 // == , != , > , < , >= , <=     Return True or False 
 
 #endregion
 
-#region String Parsing  
+
+#region 11. String Parsing  
 // Convert String To Differnet Data Types 
 
 // 1. Parse 
@@ -203,7 +214,8 @@ else
 
 #endregion
 
-#region Arrays 
+
+#region 12. Arrays 
 
 /* 
  * Array Declaration
@@ -239,21 +251,24 @@ foreach (int i in Nums2)
 
 #endregion
 
-#region Ternary Operators
+
+#region 13. Ternary Operators
 
 // Condition ? TrueOutput : TrueOutput ;
 Console.WriteLine(1 == 2 ? "Hossam" : "Siro");
 
 #endregion
 
-#region Foreach
+
+#region 14. Foreach
 
 
 // foreach (DataType i in IterableName)
 
 #endregion
 
-#region While & Do While
+
+#region 15. While & Do While
 
 int n = 5;
 while(n < 10)
@@ -271,7 +286,8 @@ while (n2 < 5);
 
 #endregion
 
-#region Switch
+
+#region 16. Switch
 Console.WriteLine("Please Enter Your Selection :: ");
 string Option = Console.ReadLine();
 switch(Option)
@@ -289,7 +305,8 @@ switch(Option)
 
 #endregion
 
-#region Methods or Functions
+
+#region 17. Methods or Functions
 
 /*
  Decleration 
@@ -339,7 +356,8 @@ static double CalculateAverage(int[] numbers,bool PrintAverage = true, bool Prin
 
 #endregion
 
-#region Comments
+
+#region 18. Comments
 
 /* 
  Comments 
@@ -355,8 +373,9 @@ static double CalculateAverage(int[] numbers,bool PrintAverage = true, bool Prin
 
 #endregion
 
+
 // todo: Study Value Types && Reference Type
-#region Value Types && Reference Type
+#region 19. Value Types && Reference Type
 
 /*
 
@@ -417,7 +436,8 @@ static void DuplicateNumbers(int [] nums)
 
 #endregion
 
-#region Value Type Casting
+
+#region 20. Value Type Casting
 
 // 1. Implicit Casting (Boxing)(Safe Casting) Put Small Size Into Big Size i.e 
 // Put int Into float , byte into int ....
@@ -487,7 +507,8 @@ else
 
 #endregion
 
-#region Goto
+
+#region 21. Goto
 
 int r = 0;
 start:
@@ -500,7 +521,8 @@ Console.ReadLine();
 
 #endregion
 
-#region String Split and Join
+
+#region 22. String Split and Join
 
 // Split(Seperator)  == > Convert String To Array of Strings
 
@@ -527,7 +549,8 @@ Console.WriteLine(StringWords);
 
 #endregion
 
-#region String Builder
+
+#region 23. String Builder
 
 // String Builder Use Linked list Data Structure
 string str = "Hello";
@@ -561,14 +584,15 @@ Console.WriteLine($"MaxCapacity {sb.MaxCapacity}");
 
 #endregion
 
-#region Compilation Process
+
+#region 24. Compilation Process
 
 
 
 #endregion
 
 
-#region Class  & Object
+#region 25. Class  & Object
 
 // Class is Complex Reference Type Data Type 
 st s = new st(); // To Solve Conflict
@@ -590,7 +614,8 @@ C_Fundamentals.Classes.Student [] students = new C_Fundamentals.Classes.Student 
 
 #endregion
 
-#region Constant and Readonly
+
+#region 26. Constant and Readonly
 
 const float Pi = 3.14f;
 
@@ -615,7 +640,8 @@ const float Pi = 3.14f;
 
 #endregion
 
-#region Static Class vs Non Static Class 
+
+#region 27. Static Class vs Non Static Class 
 
 /* 
   Static Class
@@ -650,7 +676,8 @@ Console.WriteLine(NonStaticClass.PrintHello());
 
 #endregion
 
-#region Variables Scope
+
+#region 28. Variables Scope
 
 /*
 
@@ -664,9 +691,10 @@ Console.WriteLine(NonStaticClass.PrintHello());
 
 #endregion
 
-#region Pass by Value & Pass by Reverence
 
-#region ref & out 
+#region 29. Pass by Value & Pass by Reverence
+
+
 
 // Cast value type to be reverence type 
 
@@ -725,9 +753,7 @@ static double Divide3(double number, double divisor, out bool isSucess)
 
 
 
-#endregion
-
-#region Exceptions
+#region 30. Exceptions
 
 try
 {
@@ -747,7 +773,8 @@ finally
 
 #endregion
 
-#region Enums
+
+#region 31. Enums
 
 // Enums : Range of Related Constans Like Week Days, Month Days , or Genders
 
@@ -809,7 +836,8 @@ Console.WriteLine(se6 ^ Seasons.Winter);
 
 #endregion
 
-#region Abstract Class vs Sealed Class 
+
+#region 32. Abstract Class vs Sealed Class 
 
 /*
 1. Instantiation:
@@ -859,7 +887,8 @@ Console.WriteLine(sc.MyProperty);
 
 #endregion
 
-#region virtual and protected members
+
+#region 33. virtual and protected members
 
 // virtual 
 // protected : متشاف داخل الكلاس اللى انا فيه واى كلاس بيورث منه 
@@ -901,7 +930,8 @@ Accessibility:
 
 #endregion
 
-#region Member Hiding/Shadowing or Static binding & dynamic binding 
+
+#region 34. Member Hiding/Shadowing or Static binding & dynamic binding 
 
 
 // used if yo can't edit the base class 
@@ -913,7 +943,8 @@ rc4.PrintArea2();
 
 #endregion
 
-#region Interface
+
+#region 35. Interface
 
 
 /* interface :
@@ -1004,6 +1035,7 @@ When you want to decouple the definition of behavior from the implementation.
 
 #endregion
 
+
 #region C# Exercises
 
 // see  https://www.w3resource.com/csharp-exercises/ C# Sharp Programming Exercises, Practice, Solution
@@ -1024,5 +1056,6 @@ else
 
 
 #endregion
+
 
 

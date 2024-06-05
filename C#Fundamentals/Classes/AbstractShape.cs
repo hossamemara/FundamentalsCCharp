@@ -9,9 +9,14 @@ namespace C_Fundamentals.Classes
     internal abstract class AbstractShape
     {
         public abstract double CalculateArea();
-        public void PrintArea()
+        public virtual void PrintArea()
         {
             Console.WriteLine($"Area :: {CalculateArea()}");
+        }
+
+        public void PrintArea2()
+        {
+            Console.WriteLine($"Area2 from AbstractShape :: {CalculateArea()}");
         }
     }
 }

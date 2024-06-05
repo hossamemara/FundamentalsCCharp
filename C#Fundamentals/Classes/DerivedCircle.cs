@@ -14,5 +14,11 @@ namespace C_Fundamentals.Classes
         {
             return Math.PI * raduis * raduis;
         }
+
+        public override void PrintArea()
+        {
+            base.PrintArea();  // the virtial member
+            Console.WriteLine($"Area of Circle :: {CalculateArea()}");
+        }
     }
 }

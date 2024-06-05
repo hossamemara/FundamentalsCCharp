@@ -854,7 +854,61 @@ rc2.PrintArea();
 
 SealedClass sc = new SealedClass(); // Sealed classes cannot be inherited.
 sc.MyProperty = "Hello";
-Console.WriteLine(sc.MyProperty); 
+Console.WriteLine(sc.MyProperty);
+
+
+#endregion
+
+#region virtual and protected members
+
+// virtual 
+// protected : متشاف داخل الكلاس اللى انا فيه واى كلاس بيورث منه 
+// protected internal : متشاف داخل الكلاس اللى انا فيه واى كلاس بيورث منه 
+
+/*
+ //////   https://chatgpt.com/share/3c748164-6dea-4c54-811a-c10988355407
+Protected ===> 
+
+Definition:
+
+* The protected access modifier limits the visibility of a member to the containing class and any class derived from it.
+Usage:
+
+* Use protected when you want to allow derived classes to access the member but prevent access from other classes, even those in the same assembly.
+
+Accessibility:
+
+* Accessible within the same class.
+* Accessible within derived classes (regardless of whether they are in the same assembly or not).
+ 
+
+Protected Internal ===> 
+
+ Definition:
+
+* The protected internal access modifier combines the functionalities of protected and internal. It makes a member accessible within its own assembly and also in derived classes.
+Usage:
+
+* Use protected internal when you want to allow access to the member by any code in the same assembly, as well as by derived classes, even if they are in a different assembly.
+
+Accessibility:
+
+* Accessible within the same class.
+* Accessible within derived classes (regardless of the assembly).
+* Accessible within any class in the same assembly.
+ 
+ */
+
+#endregion
+
+#region Member Hiding/Shadowing
+
+// used if yo can't edit the base class 
+AbstractShape rc3 = new DerivedRectangle { width = 5, height = 6 };
+rc3.PrintArea2();
+
+DerivedRectangle rc4 = new DerivedRectangle { width = 5, height = 6 };
+rc4.PrintArea2();
 
 #endregion
 

@@ -14,5 +14,14 @@ namespace C_Fundamentals.Classes
         {
             return width * height;
         }
+        public override void PrintArea()
+        {
+            //base.PrintArea();
+            Console.WriteLine($"Area of Rectangle :: {CalculateArea()}");
+        }
+        public new void PrintArea2()
+        {
+            Console.WriteLine($"Area2 from DerivedRectangle :: {CalculateArea()}");
+        }
     }
 }

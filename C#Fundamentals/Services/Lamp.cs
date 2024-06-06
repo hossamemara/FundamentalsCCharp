@@ -1,14 +1,14 @@
-﻿using System;
+﻿using C_Fundamentals.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Fundamentals.Interfaces
+namespace C_Fundamentals.Services
 {
-    internal interface IDevice
+    internal class Lamp: IDevice
     {
-
 
     }
 }

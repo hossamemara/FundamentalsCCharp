@@ -1032,7 +1032,7 @@ When you want to decouple the definition of behavior from the implementation.
  */
 
 
-
+// todo: Inteface and abstract class 
 
 
 #endregion

@@ -29,6 +29,7 @@ using System.Text;
 using C_Fundamentals.Classes.InternalClasses;
 using Student = C_Fundamentals.Classes.Student;
 using C_Fundamentals.Enums;
+using System.Collections;
 
 string Name = "Hossam Emara";
 string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
@@ -1034,6 +1035,36 @@ When you want to decouple the definition of behavior from the implementation.
 
 // todo: Inteface and abstract class 
 
+
+#endregion
+
+
+#region 36. Array List
+
+ArrayList list = new ArrayList();
+list.Add(1);
+list.Add(true);
+list.Add("Siro");
+list.Add(1.5);
+list.Add(false);
+list.Remove(false);
+list.Remove(1);
+list.Insert(3,"Hossam");
+list.InsertRange(3, new string[] { "Hossam", "Emara"});
+list.AddRange(new int[] { 5, 6, 7 });
+foreach (var item in list)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine(list.IndexOf(false));
+
+// Boxing ==> store value type in reference type
+// UnBoxing ==> store  reference type in  value type
+
+int u1 = 10;
+object u2 = u1; // Boxing u1
+int u3 = u1 + (int)u2; // unboxing u2
 
 #endregion
 

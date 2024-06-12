@@ -29,6 +29,8 @@ using System.Text;
 using C_Fundamentals.Classes.InternalClasses;
 using Student = C_Fundamentals.Classes.Student;
 using C_Fundamentals.Enums;
+using C_Fundamentals.Services;
+using C_Fundamentals.Interfaces;
 
 string Name = "Hossam Emara";
 string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
@@ -1034,6 +1036,54 @@ When you want to decouple the definition of behavior from the implementation.
 
 // todo: Inteface and abstract class 
 
+Tv tv = new Tv();
+tv.TurnOn();
+tv.TurnOff();
+
+Phone ph = new Phone();
+ph.TurnOn();
+ph.TurnOff();
+
+IDevice tv1 = new TVService();
+tv1.TurnOn();
+tv1.TurnOff();
+
+IRestartable rst1 = new TVService();
+rst1.Restart();
+
+IDevice ph1 = new PhoneService();
+ph1.TurnOn();
+ph1.TurnOff();
+
+IRestartable rst2 = new PhoneService();
+rst2.Restart();
+
+IDevice lm1 = new LampService();
+lm1.TurnOn();
+lm1.TurnOff();
+
+// Implicit Implementation (ضمنى) or default vs Explicit Implementation (صريح) or force
+
+// Explicit Implementation: used if more than interface have same method signature we neet to know
+// which one to be executed
+
+IDevice div1 = new TVService();
+div1.Restart();
+
+IRestartable div2 = new TVService();
+div2.Restart();
+
+TVService div3 = new TVService();
+div3.Restart();
+
+IDevice div4 = new PhoneService();
+div4.Restart();
+
+IRestartable div5 = new PhoneService();
+div5.Restart();
+
+PhoneService div6 = new PhoneService();
+// div6.Restart(); PhoneService Doesn't Contain Restart and It's Restart Related to IDevice
 
 #endregion
 

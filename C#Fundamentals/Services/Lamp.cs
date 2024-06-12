@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace C_Fundamentals.Services
 {
-    internal class Lamp: IDevice
+    internal class Lamp
     {
 
     }

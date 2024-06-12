@@ -7,17 +7,21 @@ using System.Threading.Tasks;
 
 namespace C_Fundamentals.Services
 {
-    internal class Tv
+    internal class LampService : IDevice
     {
-
         public void TurnOn()
         {
-            Console.WriteLine($"Tv Turned On");
+            Console.WriteLine($"LampService Turned On");
         }
 
         public void TurnOff()
         {
-            Console.WriteLine($"Tv Turned Off");
+            Console.WriteLine($"LampService Turned Off");
+        }
+
+        public void Restart()
+        {
+            throw new NotImplementedException();
         }
     }
 }

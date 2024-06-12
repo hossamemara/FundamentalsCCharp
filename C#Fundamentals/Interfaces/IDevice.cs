@@ -8,7 +8,9 @@ namespace C_Fundamentals.Interfaces
 {
     internal interface IDevice
     {
-
+        void TurnOn();
+        void TurnOff();
+        void Restart();
 
     }
 }

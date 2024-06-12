@@ -8,5 +8,6 @@ namespace C_Fundamentals.Interfaces
 {
     internal interface IRestartable
     {
+        void Restart();
     }
 }

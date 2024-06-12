@@ -7,7 +7,17 @@ using System.Threading.Tasks;
 
 namespace C_Fundamentals.Services
 {
-    internal class Phone: IDevice, IRestartable
+    internal class Phone
     {
+
+        public void TurnOn()
+        {
+            Console.WriteLine($"Phone Turned On");
+        }
+
+        public void TurnOff()
+        {
+            Console.WriteLine($"Phone Turned Off");
+        }
     }
 }

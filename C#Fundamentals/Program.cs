@@ -1118,6 +1118,12 @@ int u3 = u1 + (int)u2; // unboxing u2
 
 #endregion
 
+#region 37. Generic List and Dictionary
+
+// Generic List
+
+#endregion
+
 
 #region C# Exercises
 

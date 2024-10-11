@@ -1,9 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using st = C_Fundamentals.Classes.InternalClasses.Student; // Aliass Names
+using St = C_Fundamentals.Classes.InternalClasses.Student; // Aliass Names
+using C_Fundamentals.Classes;
+using System.Text;
+using C_Fundamentals.Classes.InternalClasses;
+using Student = C_Fundamentals.Classes.Student;  // Aliass Names
+using C_Fundamentals.Enums;
+using System.Collections;
+using C_Fundamentals.Services;
+using C_Fundamentals.Interfaces;
 
 #region 1.Difference Between Compiler & Interpreter 
 
 // https://www.youtube.com/watch?v=lui_SjvGl2I&list=PLoP3S2S1qTfBCtTYJ2dyy3mpn7aWAAjdN&index=6
+// https://chatgpt.com/share/eae0b054-8fdf-4ead-b54c-03edd0da41e5
 
 #endregion
 
@@ -24,14 +33,7 @@ using st = C_Fundamentals.Classes.InternalClasses.Student; // Aliass Names
 
 */
 
-using C_Fundamentals.Classes;
-using System.Text;
-using C_Fundamentals.Classes.InternalClasses;
-using Student = C_Fundamentals.Classes.Student;
-using C_Fundamentals.Enums;
-using System.Collections;
-using C_Fundamentals.Services;
-using C_Fundamentals.Interfaces;
+
 
 string Name = "Hossam Emara";
 string @float = "Hossam Emara"; // if you need to use reserved keywork we use @
@@ -52,15 +54,14 @@ float y = 10.5f;
  
  # Primitive Data Types (Value Type)
 
- 1. string ==> 16 bit per character	Stores a sequence of characters, surrounded by double quotes
- 2. boolean ==> 1 bit	   true & false
- 3. int  ==> 32 bit	   Stores whole numbers from -2,147,483,648 to 2,147,483,647
- 4. long ==> 64 bit	   Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
- 5. float ==> 32 bit	   Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
- 6. double ==> 64 bit	   Stores fractional numbers. Sufficient for storing 15 decimal digits
- 7. char	==> 16 bit	   Stores a single character/letter, surrounded by single quotes
- 8. byte ==> Unsigned 8-bit integer	   Stores 0 to 255	
- 9. uint ==> Unsigned 32-bit integer	0 to 4,294,967,295	
+ 1. boolean ==> 1 bit	   true & false
+ 2. int  ==> 32 bit	   Stores whole numbers from -2,147,483,648 to 2,147,483,647
+ 3. long ==> 64 bit	   Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+ 4. float ==> 32 bit	   Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+ 5. double ==> 64 bit	   Stores fractional numbers. Sufficient for storing 15 decimal digits
+ 6. char	==> 16 bit	   Stores a single character/letter, surrounded by single quotes
+ 7. byte ==> Unsigned 8-bit integer	   Stores 0 to 255	
+ 8. uint ==> Unsigned 32-bit integer	0 to 4,294,967,295	
  
 # Non Primitive Data Types (Reference Type)
 
@@ -77,6 +78,47 @@ float y = 10.5f;
  */
 
 
+#region Stack and Heap
+
+// https://chatgpt.com/share/eae0b054-8fdf-4ead-b54c-03edd0da41e5
+
+/*
+Stack and heap are two types of memory used by programs to store data during execution. They are used for different purposes and have distinct characteristics:
+
+==> Stack:
+
+* Purpose: The stack is used for static memory allocation, primarily for storing local variables, function parameters, and return addresses.It is also used to manage the flow of function calls.
+* Memory Allocation: Memory on the stack is allocated and deallocated automatically as functions are called and return.
+* Size: The stack has a limited, predefined size, usually much smaller than the heap.
+* Access: The stack operates on a Last-In, First-Out (LIFO) principle. When a function is called, its variables are pushed onto the stack, and when the function returns, they are popped off.
+* Speed: Access to stack memory is very fast because of its simple structure and proximity to the CPU.
+* Scope: Variables stored on the stack are only accessible within the function that created them.
+* Lifetime: The lifetime of stack variables is limited to the duration of the function call. Once the function returns, the memory is automatically reclaimed.
+
+==> Heap:
+
+* Purpose: The heap is used for dynamic memory allocation, where memory is allocated and deallocated explicitly by the programmer or automatically by a garbage collector.
+* Memory Allocation: Memory on the heap is managed manually in languages like C / C++(using malloc and free) or automatically in languages like Java and Python (via garbage collection).
+* Size: The heap is larger than the stack and can grow as needed, up to the limits of the system's available memory.
+* Access: Memory on the heap is accessed via pointers or references, and there is no particular order to how memory is allocated or freed.
+* Speed: Access to heap memory is slower compared to stack memory due to the overhead of dynamic allocation and pointer dereferencing.
+* Scope: Variables stored on the heap can be accessed from anywhere in the program, provided you have a reference or pointer to that memory.
+* Lifetime: The lifetime of heap variables can extend beyond the scope of a single function, persisting until they are explicitly deallocated or garbage collected.
+
+# Key Differences:
+
+* Allocation / Deallocation: Stack memory is automatically managed, while heap memory requires explicit management.
+* Size and Flexibility: The stack is limited in size and more rigid, while the heap is larger and more flexible, allowing for dynamic memory needs.
+* Speed: Stack operations are faster due to their straightforward nature, while heap operations can be slower due to the complexity of dynamic memory management.
+* Fragmentation: The heap can suffer from memory fragmentation, where free memory is scattered in small blocks, making it difficult to allocate large contiguous blocks of memory. The stack does not suffer from fragmentation.
+
+# Use Cases:
+
+* Stack: Ideal for small, temporary variables, such as function arguments or local variables that do not need to persist outside the function.
+* Heap: Used for larger, complex data structures like dynamic arrays, linked lists, or objects that need to exist beyond the scope of a single function.
+
+ */
+#endregion
 
 
 #region string Methods
@@ -122,7 +164,7 @@ bool flag3 = true;
 Console.WriteLine("========= Logical Operators ========");
 Console.WriteLine(flag & flag2 & flag3); // Check All Flags
 
-Console.WriteLine(flag & flag2 & flag3); // if first left flag is false then not complete check and result false
+Console.WriteLine(flag && flag2 && flag3); // if first left flag is false then not complete check and result false
 
 Console.WriteLine(flag | flag2 | flag3); // Check All Flags
 
@@ -169,14 +211,17 @@ Console.WriteLine($"Number  = {Number}"); // 11
 // Pre Increment & Decrement 
 
 int Result1 = ++Number;
-Console.WriteLine($"Result1  = {Result1}");
-Console.WriteLine($"Number  = {Number}"); // 12
+Console.WriteLine($"++Number  = {++Number}"); // 13
+Console.WriteLine($"Result1  = {Result1}"); // 12
+Console.WriteLine($"Number  = {Number}"); // 13
 
 // Post Increment & Decrement
 
 int Result2 = Number++;
-Console.WriteLine($"Result2  = {Result2}");
-Console.WriteLine($"Number  = {Number}"); // 13
+Console.WriteLine($"Number++  = {Number++}"); // 14
+Console.WriteLine($"Number++  = {Number++}"); // 15
+Console.WriteLine($"Result2  = {Result2}"); // 13
+Console.WriteLine($"Number  = {Number}"); // 16
 
 #endregion
 
@@ -229,11 +274,11 @@ else
 
 int[] Numbers = { };
 int[] Nums = new int[5];
-for (int i = 0; i < 5; i++)
+for (int i = 0; i < Nums.Length; i++)
 {
     Console.WriteLine($"Please Enter Item {i + 1}");
     bool Num = int.TryParse(Console.ReadLine(),out Nums[i]);
-    //Console.WriteLine($"Num Bool is {Num}");
+    Console.WriteLine($"Num Bool is {Num}");
 }
 
 foreach (int i in Nums)
@@ -248,7 +293,7 @@ Array.Sort(Nums);
 foreach (int i in Nums)
     Console.WriteLine($"Array Nums Items :: {i}");
 int[] Nums2 = new int[5];
-Array.Copy(Nums, Nums2, 3);
+Array.Copy(Nums, Nums2, 4);
 foreach (int i in Nums2)
     Console.WriteLine($"Array Nums2 Items :: {i}");
 
@@ -263,11 +308,19 @@ Console.WriteLine(1 == 2 ? "Hossam" : "Siro");
 #endregion
 
 
-#region 14. Foreach
+#region 14. Foreach && For
 
 
 // foreach (DataType i in IterableName)
 
+/* 
+ 
+for(int x = 0; x<10 ; x++)
+{
+
+}
+
+ */
 #endregion
 
 
@@ -531,7 +584,7 @@ Console.ReadLine();
 
 Console.WriteLine("Please enter string Words Sperrated by , ");
 string? words = Console.ReadLine();
-if (String.IsNullOrEmpty(words))
+if (string.IsNullOrEmpty(words))
 {
     Console.WriteLine("No words entered.");
 }
@@ -598,8 +651,8 @@ Console.WriteLine($"MaxCapacity {sb.MaxCapacity}");
 #region 25. Class  & Object
 
 // Class is Complex Reference Type Data Type 
-st s = new st(); // To Solve Conflict
-C_Fundamentals.Classes.Student s1 = new C_Fundamentals.Classes.Student(30) { Name="Hossam",Salary=100};  // Object Initializer
+St s = new St(); // To Solve Conflict
+C_Fundamentals.Classes.Student s1 = new C_Fundamentals.Classes.Student(30) { Name="Hossam",Salary=100};  // Object Initializer // init only
 s1.GetHashCode();  // Class Inherit From Object
 //Student s2 = new Student(30, Id = 1); // Can't Set Id
 C_Fundamentals.Classes.Student [] students = new C_Fundamentals.Classes.Student [] {} ;
@@ -609,6 +662,18 @@ C_Fundamentals.Classes.Student [] students = new C_Fundamentals.Classes.Student 
     There's Default and User Defined Constructor
     
 */
+
+/*
+
+  Properties (Data, Attributes): Code Member to Control Reading and Writing For Variables 
+
+/*
+
+
+
+Student st1 = new Student(30);
+st1.Gender = "Male";
+//Console.WriteLine(st1.Gender); this set only property
 
 
 
@@ -643,7 +708,9 @@ const float Pi = 3.14f;
 
 #endregion
 
+#region Access Modifiers 
 
+#endregion
 #region 27. Static Class vs Non Static Class 
 
 /* 
@@ -753,7 +820,6 @@ static double Divide3(double number, double divisor, out bool isSucess)
 
 
 #endregion
-
 
 
 #region 30. Exceptions
@@ -1117,6 +1183,7 @@ object u2 = u1; // Boxing u1
 int u3 = u1 + (int)u2; // unboxing u2
 
 #endregion
+
 
 #region 37. Generic List and Dictionary
 

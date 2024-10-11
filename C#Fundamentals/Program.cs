@@ -4,6 +4,8 @@ using C_Fundamentals.Classes;
 using System.Text;
 using C_Fundamentals.Classes.InternalClasses;
 using Student = C_Fundamentals.Classes.Student;  // Aliass Names
+using Std = CSharpFundamentalsCL.Modeles.Student;
+// using Emp = CSharpFundamentalsCL.Modeles.Employee;  // Internal Not Accessables Outside CSharpFundamentalsCL Assemply 
 using C_Fundamentals.Enums;
 using System.Collections;
 using C_Fundamentals.Services;
@@ -657,17 +659,16 @@ s1.GetHashCode();  // Class Inherit From Object
 //Student s2 = new Student(30, Id = 1); // Can't Set Id
 C_Fundamentals.Classes.Student [] students = new C_Fundamentals.Classes.Student [] {} ;
 
-/* Constructor ==> Special Type of Method Used For Class Initialization
+/* 
+ 
+Constructor ==> Special Type of Method Used For Class Initialization
     This Methos Executed When We Create Object From Class
     There's Default and User Defined Constructor
     
-*/
 
-/*
 
   Properties (Data, Attributes): Code Member to Control Reading and Writing For Variables 
 
-/*
 
 
 
@@ -676,6 +677,7 @@ st1.Gender = "Male";
 //Console.WriteLine(st1.Gender); this set only property
 
 
+*/
 
 
 
@@ -708,10 +710,13 @@ const float Pi = 3.14f;
 
 #endregion
 
-#region Access Modifiers 
+#region 27. Access Modifiers 
+
+var Stu = new Std();
 
 #endregion
-#region 27. Static Class vs Non Static Class 
+
+#region 28. Static Class vs Non Static Class 
 
 /* 
   Static Class
@@ -747,7 +752,7 @@ Console.WriteLine(NonStaticClass.PrintHello());
 #endregion
 
 
-#region 28. Variables Scope
+#region 29. Variables Scope
 
 /*
 
@@ -762,7 +767,7 @@ Console.WriteLine(NonStaticClass.PrintHello());
 #endregion
 
 
-#region 29. Pass by Value & Pass by Reverence
+#region 30. Pass by Value & Pass by Reverence
 
 
 
@@ -822,7 +827,7 @@ static double Divide3(double number, double divisor, out bool isSucess)
 #endregion
 
 
-#region 30. Exceptions
+#region 31. Exceptions
 
 try
 {
@@ -843,7 +848,7 @@ finally
 #endregion
 
 
-#region 31. Enums
+#region 32. Enums
 
 // Enums : Range of Related Constans Like Week Days, Month Days , or Genders
 
@@ -906,7 +911,7 @@ Console.WriteLine(se6 ^ Seasons.Winter);
 #endregion
 
 
-#region 32. Abstract Class vs Sealed Class 
+#region 33. Abstract Class vs Sealed Class 
 
 /*
 1. Instantiation:
@@ -957,7 +962,7 @@ Console.WriteLine(sc.MyProperty);
 #endregion
 
 
-#region 33. virtual and protected members
+#region 34. virtual and protected members
 
 // virtual 
 // protected : متشاف داخل الكلاس اللى انا فيه واى كلاس بيورث منه 
@@ -1000,7 +1005,7 @@ Accessibility:
 #endregion
 
 
-#region 34. Member Hiding/Shadowing or Static binding & dynamic binding 
+#region 35. Member Hiding/Shadowing or Static binding & dynamic binding 
 
 
 // used if yo can't edit the base class 

@@ -8,6 +8,7 @@ namespace CSharpFundamentalsCL.Modeles
 {
     internal class Employee
     {
+        Student student = new Student { Age = 10 , Salary = 10, City = "Banha"};
         
     }
 }

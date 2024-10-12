@@ -13,6 +13,7 @@ namespace C_Fundamentals.Classes
         public Student(int Age)
         {
             this.Age = Age;
+            this._message = string.Empty; // readonly only can be changed in constructor
         }
         // Prpperties
         public int Id { get;  }
@@ -23,6 +24,7 @@ namespace C_Fundamentals.Classes
         private long _Salary; // backing field
 
         private string? _gender; // backing field
+        private readonly string? _message; // backing field
         public string Gender {
             set
             {

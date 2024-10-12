@@ -653,7 +653,7 @@ Console.WriteLine($"MaxCapacity {sb.MaxCapacity}");
 #region 25. Class  & Object
 
 // Class is Complex Reference Type Data Type 
-St s = new St(); // To Solve Conflict
+St s = new St("Cairo"); // To Solve Conflict
 C_Fundamentals.Classes.Student s1 = new C_Fundamentals.Classes.Student(30) { Name="Hossam",Salary=100};  // Object Initializer // init only
 s1.GetHashCode();  // Class Inherit From Object
 //Student s2 = new Student(30, Id = 1); // Can't Set Id
@@ -689,6 +689,8 @@ st1.Gender = "Male";
 
 const float Pi = 3.14f;
 
+// s1._message Readonly Can't Chage Here 
+
 //const float Pi; // Not Allowed
 
 // const vs readonly 
@@ -703,7 +705,7 @@ const float Pi = 3.14f;
  readonly:
 
 1. runtime execution
-2. We Can Change its Value at Constructor only
+2. We Can Change its Value at it's Class Constructor only
 3. We Mustn't Give it Value at Same line
  */
 
@@ -713,6 +715,21 @@ const float Pi = 3.14f;
 #region 27. Access Modifiers 
 
 var Stu = new Std();
+
+
+//1. puplic ==> all type
+//2. internal ==>  the same project
+//3. private ==> the same type
+//4. protected ==>  the same class and it's child classs
+//5. protected internal ==>  the same project and every type inherit from this assemply
+
+
+// Types  (internal) ==> Default
+
+
+// Type Members  (Private) ==> Default 
+
+
 
 #endregion
 

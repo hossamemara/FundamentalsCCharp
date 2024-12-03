@@ -795,12 +795,12 @@ var result = Divide(10, 0, isSucess);
 Console.WriteLine(isSucess);
 Console.WriteLine(result);
 
-bool isSucess2 = true;
+bool isSucess2 = true; // Must Assign value
 var result2 = Divide2(10, 0,ref isSucess2);
 Console.WriteLine(isSucess2);
 Console.WriteLine(result2);
 
-bool isSucess3;
+bool isSucess3; // Mustn't Assign value
 var result3 = Divide3(10, 0, out isSucess3);
 Console.WriteLine(isSucess3);
 Console.WriteLine(result3);
@@ -820,10 +820,10 @@ static double Divide2(double number, double divisor,ref bool isSucess)
 {
     if (divisor == 0)
     {
-        isSucess = false;
+        isSucess = false; // We Can Comment This 
         return 0;
     }
-    isSucess = true;
+    isSucess = true; // We Can Comment This
     return number / divisor;
 
 }
@@ -832,10 +832,10 @@ static double Divide3(double number, double divisor, out bool isSucess)
 {
     if (divisor == 0)
     {
-        isSucess = false;
+        isSucess = false; // If We Comment This This Raise Compilation Errror 
         return 0;
     }
-    isSucess = true;
+    isSucess = true; // If We Comment This This Raise Compilation Errror 
     return number / divisor;
 
 }

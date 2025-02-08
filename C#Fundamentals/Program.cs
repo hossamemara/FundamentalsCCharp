@@ -788,7 +788,7 @@ Console.WriteLine(NonStaticClass.PrintHello());
 
 
 
-// Cast value type to be reverence type 
+//Cast value type to be reverence type 
 
 bool isSucess = true;
 var result = Divide(10, 0, isSucess);

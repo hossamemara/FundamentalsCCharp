@@ -11,5 +11,13 @@ namespace C_Fundamentals.Classes.InternalClasses
         public int Id { get; }
         public string Name { get; init; }
         public int Age { get; set; }
+        protected string State { get; set; }
+        public Student(string state)
+        
+        {
+            this.State = state;
+        }
     }
+
+    
 }

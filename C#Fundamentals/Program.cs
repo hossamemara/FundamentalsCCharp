@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿//See https://aka.ms/new-console-template for more information
 using st = C_Fundamentals.Classes.InternalClasses.Student; // Aliass Names
 
 #region 1.Difference Between Compiler & Interpreter 

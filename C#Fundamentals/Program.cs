@@ -1240,4 +1240,46 @@ else
 #endregion
 
 
+#region OOP
+
+/* OOP Pillars 
+ 
+1. Encapsulation
+2. Inheritance
+3. Pplymerphism
+4. Abstraction
+ 
+ */
+
+#region 1. Encapsulation
+
+var employee = new CompanyEmployee();
+// employee.FirstName = "Hossam"; can't be set direct
+// No Last Name Provided !!!!!
+employee.SetFullName("Hossam", "Emara");
+
+//employee.BirthDate = new DateOnly(1900, 1, 1);  // Accept Invalid Date
+//employee.BasicSalary = -5000; // Accept Minus Salary
+employee.SetBasicSalary(6000);
+employee.SetBirthDate(new DateOnly(1900, 1, 1));
+// by using Encapsulation we can protect properties from not logic values
+
+// Encapsulation depend on access modifiers
+// Encapsulation protect the object from invalid state using filter or validation
+
+
+
+#endregion
+
+#region 2. Inheritance
+
+// Classes should be related to each other , then we can use inheritance
+// Inheritance increase system complexty and make tight coupling
+
+#endregion
+
+
+
+#endregion
+
 

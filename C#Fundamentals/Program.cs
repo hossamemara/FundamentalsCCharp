@@ -194,7 +194,7 @@ var data2 = "Hossam";
 
 
 #region 7. Operator Precedence  اولويه التنفيذ
-Console.WriteLine(6+7*9-1);
+Console.WriteLine(6 + 7 * 9 - 1);
 Console.WriteLine((6 + 7) * 9 - 1);
 #endregion
 
@@ -279,7 +279,7 @@ int[] Nums = new int[5];
 for (int i = 0; i < Nums.Length; i++)
 {
     Console.WriteLine($"Please Enter Item {i + 1}");
-    bool Num = int.TryParse(Console.ReadLine(),out Nums[i]);
+    bool Num = int.TryParse(Console.ReadLine(), out Nums[i]);
     Console.WriteLine($"Num Bool is {Num}");
 }
 
@@ -329,7 +329,7 @@ for(int x = 0; x<10 ; x++)
 #region 15. While & Do While
 
 int n = 5;
-while(n < 10)
+while (n < 10)
 {
     Console.WriteLine(n++);
 }
@@ -348,7 +348,7 @@ while (n2 < 5);
 #region 16. Switch
 Console.WriteLine("Please Enter Your Selection :: ");
 string Option = Console.ReadLine();
-switch(Option)
+switch (Option)
 {
     case "1":
         Console.WriteLine(Name.ToUpper());
@@ -392,13 +392,13 @@ PrintHello("Hello World"); // Method Invoking , Calling or Triggering
 
 // Optional Parameters 
 
-int[] numbersArray = new int[] {1,2,3,4,5 };
+int[] numbersArray = new int[] { 1, 2, 3, 4, 5 };
 CalculateAverage(numbersArray);  // Method Invoke , Trigger or Calling
 CalculateAverage(numbersArray, false);  // Method Invoke , Trigger or Calling
 CalculateAverage(numbersArray, PrintAverage: false);  // Method Invoke , Trigger or Calling
 
 
-static double CalculateAverage(int[] numbers,bool PrintAverage = true, bool PrintSum = false) // bool PrintAverage = false is Optional Parameters
+static double CalculateAverage(int[] numbers, bool PrintAverage = true, bool PrintSum = false) // bool PrintAverage = false is Optional Parameters
 {
     int sum = 0;
     double average = 0;
@@ -461,7 +461,7 @@ Console.WriteLine($"q2 = {q2}");
 
 // Reference Types
 
-int[] array1 = { 1,2,3}; // Addresse 1  , Value Stored in Heap Location
+int[] array1 = { 1, 2, 3 }; // Addresse 1  , Value Stored in Heap Location
 int[] array2 = array1; // Same Addresse 1, , Value Stored in Same Heap Location
 array1[0] = 4;
 array1[1] = 5;
@@ -476,7 +476,7 @@ Console.WriteLine($"array2[0] = {array2[2]}");
 int num = 5;
 DuplicateNumber(num);
 Console.WriteLine($"num = {num}");
-int [] numbersArr = { 1, 2, 3 };
+int[] numbersArr = { 1, 2, 3 };
 DuplicateNumbers(numbersArr);
 Console.WriteLine($"numbersArr[0]}}  = {numbersArr[0]}");
 Console.WriteLine($"numbersArr[1]}}  = {numbersArr[1]}");
@@ -486,10 +486,10 @@ static void DuplicateNumber(int num)
     num *= 2;
 }
 
-static void DuplicateNumbers(int [] nums)
+static void DuplicateNumbers(int[] nums)
 {
     for (int i = 0; i < nums.Length; i++)
-        nums[i] *= 2; 
+        nums[i] *= 2;
 }
 
 #endregion
@@ -524,7 +524,7 @@ checked
 // if You Need This Casting Not Raise Exception This Only Brackets Block
 unchecked
 {
-   
+
 
 }
 
@@ -613,7 +613,7 @@ Console.WriteLine(StringWords);
 // String Builder Use Linked list Data Structure
 string str = "Hello";
 str = "Hello Pacionate ";
-str+= "World";
+str += "World";
 // We Have 3 Memory Locations In Heap This Will Make Low Performance
 Console.WriteLine(str);
 
@@ -654,10 +654,10 @@ Console.WriteLine($"MaxCapacity {sb.MaxCapacity}");
 
 // Class is Complex Reference Type Data Type 
 St s = new St("Cairo"); // To Solve Conflict
-C_Fundamentals.Classes.Student s1 = new C_Fundamentals.Classes.Student(30) { Name="Hossam",Salary=100};  // Object Initializer // init only
+C_Fundamentals.Classes.Student s1 = new C_Fundamentals.Classes.Student(30) { Name = "Hossam", Salary = 100 };  // Object Initializer // init only
 s1.GetHashCode();  // Class Inherit From Object
 //Student s2 = new Student(30, Id = 1); // Can't Set Id
-C_Fundamentals.Classes.Student [] students = new C_Fundamentals.Classes.Student [] {} ;
+C_Fundamentals.Classes.Student[] students = new C_Fundamentals.Classes.Student[] { };
 
 /* 
  
@@ -796,7 +796,7 @@ Console.WriteLine(isSucess);
 Console.WriteLine(result);
 
 bool isSucess2 = true; // Must Assign value
-var result2 = Divide2(10, 0,ref isSucess2);
+var result2 = Divide2(10, 0, ref isSucess2);
 Console.WriteLine(isSucess2);
 Console.WriteLine(result2);
 
@@ -805,7 +805,7 @@ var result3 = Divide3(10, 0, out isSucess3);
 Console.WriteLine(isSucess3);
 Console.WriteLine(result3);
 
-static double Divide(double number , double divisor, bool isSucess)
+static double Divide(double number, double divisor, bool isSucess)
 {
     if (divisor == 0)
     {
@@ -814,9 +814,9 @@ static double Divide(double number , double divisor, bool isSucess)
     }
     isSucess = true;
     return number / divisor;
-        
+
 }
-static double Divide2(double number, double divisor,ref bool isSucess)
+static double Divide2(double number, double divisor, ref bool isSucess)
 {
     if (divisor == 0)
     {
@@ -850,7 +850,7 @@ try
 {
     int g1 = 10;
     int g2 = 0;
-    Console.WriteLine(g1/g2);
+    Console.WriteLine(g1 / g2);
 }
 catch (Exception e)
 {
@@ -880,7 +880,7 @@ finally
 
 
 
-WeekDays weekEndDays = WeekDays.Saturday ;
+WeekDays weekEndDays = WeekDays.Saturday;
 Console.WriteLine(weekEndDays);
 
 
@@ -909,11 +909,11 @@ Console.WriteLine(se1 & se2);
 // ~  ==> Except operator
 Seasons se3 = Seasons.Winter | Seasons.Summer;
 Seasons se4 = Seasons.Summer;
-Console.WriteLine(se3 & ~ se4);
+Console.WriteLine(se3 & ~se4);
 
 
 Seasons se5 = Seasons.Winter | Seasons.Spring;
-Console.WriteLine(se5 & ~ Seasons.Summer);
+Console.WriteLine(se5 & ~Seasons.Summer);
 
 // ^ ==> Toogle operator
 Seasons se6 = Seasons.Winter | Seasons.Spring;
@@ -958,8 +958,8 @@ Console.WriteLine(se6 ^ Seasons.Winter);
  */
 
 Circle cr1 = new Circle { raduis = 5 };
-cr1.PrintArea();   
-Rectangle rc1 = new Rectangle { width = 5 , height =6};
+cr1.PrintArea();
+Rectangle rc1 = new Rectangle { width = 5, height = 6 };
 rc1.PrintArea();
 
 // AbstractShape shape2 = new AbstractShape { raduis = 3 }; Can't be instantiated directly
@@ -1187,8 +1187,8 @@ list.Add(1.5);
 list.Add(false);
 list.Remove(false);
 list.Remove(1);
-list.Insert(3,"Hossam");
-list.InsertRange(3, new string[] { "Hossam", "Emara"});
+list.Insert(3, "Hossam");
+list.InsertRange(3, new string[] { "Hossam", "Emara" });
 list.AddRange(new int[] { 5, 6, 7 });
 foreach (var item in list)
 {
@@ -1231,7 +1231,7 @@ int FirstNumber = int.Parse(Console.ReadLine());
 Console.WriteLine("Please Enter The Second Number :: ");
 int SecondNumber = int.Parse(Console.ReadLine());
 int Sum = FirstNumber + SecondNumber;
-if(FirstNumber == SecondNumber)
+if (FirstNumber == SecondNumber)
     Console.WriteLine($"3 * FirstNumber {3 * FirstNumber}");
 else
     Console.WriteLine($"The Sum of Two Number {FirstNumber} &&  {SecondNumber} = {Sum}");
@@ -1246,7 +1246,7 @@ else
  
 1. Encapsulation
 2. Inheritance
-3. Pplymerphism
+3. Polymorphism
 4. Abstraction
  
  */
@@ -1261,7 +1261,7 @@ employee.SetFullName("Hossam", "Emara");
 //employee.BirthDate = new DateOnly(1900, 1, 1);  // Accept Invalid Date
 //employee.BasicSalary = -5000; // Accept Minus Salary
 employee.SetBasicSalary(6000);
-employee.SetBirthDate(new DateOnly(1900, 1, 1));
+employee.SetBirthDate(new DateOnly(2008, 1, 1));
 // by using Encapsulation we can protect properties from not logic values
 
 // Encapsulation depend on access modifiers
@@ -1274,11 +1274,55 @@ employee.SetBirthDate(new DateOnly(1900, 1, 1));
 #region 2. Inheritance
 
 // Classes should be related to each other , then we can use inheritance
-// Inheritance increase system complexty and make tight coupling
+// Inheritance increase system complexity and make tight coupling
+
+//var emp1 = new Employee();
+//emp1.SetFullName("Hossam", "Emara");
+//emp1.SetBirthDate(new DateOnly(2020, 1, 1));
+
+var applicant = new Applicant();
+applicant.SetFullName("Esraa", "Nagah");
+applicant.SetBirthDate(new DateOnly(2021, 1, 1));
+PrintPersonDetails(applicant);
+//PrintPersonDetails(emp1);
+
+void PrintPersonDetails(Person person)
+{
+    Console.WriteLine($"Full Name: {person.FirstName} {person.LastName}");
+    Console.WriteLine($"Full Name: {person.BirthDate}");
+}
+#endregion
+
+#region 3. Polymorphism
+
+
+
 
 #endregion
 
+#region 4. Abstraction
 
+// This Using abstract class and abstract method
+var notifier = new Notifier("mail.z2data.com", 25, "noreplay@z2data.com", "He123");
+
+var paySlip = new PaySlipGenerator(notifier);
+var hourlyEmployee = new HourlyEmployees();
+hourlyEmployee.WorkingHours = 9;
+hourlyEmployee.HourRate = 5;
+hourlyEmployee.SetFullName("Mohamed", "Amin");
+hourlyEmployee.Email = "Mohamed.amin@z2data.com";
+paySlip.Generate(hourlyEmployee);
+var salariedEmployee = new SalariedEmployee();
+salariedEmployee.BasicSalary = 9000;
+salariedEmployee.Transportation = 500;
+salariedEmployee.Housing = 200;
+salariedEmployee.Email = "Basem.mohamed@z2data.com";
+salariedEmployee.SetFullName("Basem", "Mohamed");
+paySlip.Generate(salariedEmployee);
+
+
+
+#endregion
 
 #endregion
 

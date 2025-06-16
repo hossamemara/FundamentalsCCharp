@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_Fundamentals.Classes
 {
-    internal class CompanyEmployee
+    internal class Person
     {
         public int ID { get; set; }
         //public string FirstName { get; set; }  can accept any value and can be null
@@ -14,7 +14,7 @@ namespace C_Fundamentals.Classes
 
 
         // First Name and Last Name should be set
-        public string FirstName { get; private  set; }
+        public string FirstName { get; private set; }
 
         public string LastName { get; private set; }
 
@@ -22,7 +22,7 @@ namespace C_Fundamentals.Classes
         public void SetFullName(string firstName, string lastName)
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
-                throw new ArgumentException("first name & last name should be provided");
+                throw new ArgumentException("firs name & last name should be provided");
             else
             {
                 this.FirstName = firstName;
@@ -57,5 +57,8 @@ namespace C_Fundamentals.Classes
             else
                 this.BasicSalary = basicSalary;
         }
-    }
+
+
+    
+}
 }
